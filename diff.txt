@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso de Arduino con ESP32</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #f4f6f8;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #1e88e5, #26c6da);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #0d47a1;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    section {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1e88e5;
+    }
+    code {
+      background: #eee;
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background: #263238;
+      color: #e0e0e0;
+      padding: 15px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    footer {
+      background: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: #1e88e5;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #1565c0;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Formación en Arduino con ESP32</h1>
+  <p>Aprende desde cero a programar y usar el ESP32 paso a paso</p>
+</header>
+
+<nav>
+  <a href="#intro">Introducción</a>
+  <a href="#instalacion">Instalación</a>
+  <a href="#primeros">Primeros pasos</a>
+  <a href="#ejemplos">Ejemplos</a>
+  <a href="#recursos">Recursos</a>
+</nav>
+
+<div class="container">
+
+  <section id="intro">
+    <h2>¿Qué es el ESP32?</h2>
+    <p>
+      El <strong>ESP32</strong> es un microcontrolador muy potente que incluye
+      WiFi y Bluetooth integrados. Es ideal para proyectos de
+      <em>IoT (Internet de las Cosas)</em>, domótica, robótica y sistemas
+      embebidos.
+    </p>
+    <ul>
+      <li>Procesador de 32 bits</li>
+      <li>WiFi y Bluetooth integrados</li>
+      <li>Compatible con Arduino IDE</li>
+      <li>Bajo consumo de energía</li>
+    </ul>
+  </section>
+
+  <section id="instalacion">
+    <h2>Instalación del entorno</h2>
+    <ol>
+      <li>Descarga e instala <strong>Arduino IDE</strong>.</li>
+      <li>Abre el IDE y ve a <em>Archivo → Preferencias</em>.</li>
+      <li>Añade esta URL al gestor de placas:</li>
+    </ol>
+    <code>https://dl.espressif.com/dl/package_esp32_index.json</code>
+    <ol start="4">
+      <li>Ve a <em>Herramientas → Placa → Gestor de placas</em>.</li>
+      <li>Busca <strong>ESP32</strong> e instálalo.</li>
+    </ol>
+  </section>
+
+  <section id="primeros">
+    <h2>Primer programa: Blink</h2>
+    <p>
+      Vamos a encender y apagar un LED. Este es el clásico programa
+      <strong>Blink</strong> adaptado al ESP32.
+    </p>
+    <pre><code>#define LED_PIN 2
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_PIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_PIN, LOW);
+  delay(1000);
+}
+</code></pre>
+    <p>
+      Conecta el ESP32, selecciona la placa correcta y pulsa <strong>Subir</strong>.
+    </p>
+  </section>
+
+  <section id="ejemplos">
+    <h2>Ejemplos prácticos</h2>
+    <ul>
+      <li>Lectura de sensores (temperatura, humedad, luz)</li>
+      <li>Control de LEDs y relés</li>
+      <li>Servidor web con ESP32</li>
+      <li>Conexión a WiFi</li>
+      <li>Proyectos IoT</li>
+    </ul>
+    <a href="#" class="btn">Ver más ejemplos</a>
+  </section>
+
+  <section id="recursos">
+    <h2>Recursos recomendados</h2>
+    <ul>
+      <li>Documentación oficial de Espressif</li>
+      <li>Foros y comunidades Arduino</li>
+      <li>Canales de YouTube sobre ESP32</li>
+      <li>Repositorios de GitHub con proyectos</li>
+    </ul>
+  </section>
+
+</div>
+
+<footer>
+  <p>© 2026 - Formación Arduino ESP32 | Aprende, crea y experimenta 🚀</p>
+</footer>
+
+</body>
+</html>
